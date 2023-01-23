@@ -3,22 +3,26 @@ const newRecipeBtn = document.getElementById('newRecipe');
 const recipeTitleInput = document.getElementById('recipeTitle');
 const mealTypeInput = document.getElementById('mealType');
 const numberOfPeopleServesInput = document.getElementById(
-  'numberOfPeopleServesInput'
+  'numberOfPeopleServes'
 );
 const difficultyLevelInput = document.getElementById('difficultyLevel');
 const ingredientsInput = document.getElementById('ingredients');
 const preparationStepsInput = document.getElementById('preparationSteps');
 
-let cardNumber = 2;
+let cardNumber;
 
-const getData = async () => {
+const getRecipes = async () => {
   const response = await fetch('data.json');
   const data = await response.json();
-  displayList(data);
+
+  for (const number in data.dishes) {
+    cardNumber = number;
+  }
+  displayRecipes(data);
 };
 
-const displayList = (data) => {
-  newRecipeBtn.onclick = () => newRecipe(data);
+const displayRecipes = (data) => {
+  newRecipeBtn.onclick = () => createNewRecipe(data);
 
   for (const i in data.dishes) {
     const cardDiv = document.createElement('div');
@@ -73,26 +77,19 @@ const displayList = (data) => {
   }
 };
 
-const newRecipe = (data) => {
+const createNewRecipe = (data) => {
   cardNumber += 1;
 
+  if (preparationStepsInput.value.trim() === '') return false;
   const preparationSteps = preparationStepsInput.value.split(',');
-  if (preparationStepsValue.trim() === '') {
-    return;
-  }
-
   const preparationStepsArray = [];
   preparationSteps.map((step) => {
     preparationStepsArray.push(`"${step}"`);
   });
 
+  if (ingredientsInput.value.trim() === '') return false;
   let ingredients = ingredientsInput.value.split(': ');
-  if (ingredientsValue.trim() === '') {
-    return;
-  }
-
-  let ingredientsArrayObject = [];
-
+  const ingredientsArrayObject = [];
   ingredients = ingredients.toString();
   ingredients = ingredients.split(',');
   for (let i = 0; i < ingredients.length; i++) {
@@ -124,7 +121,7 @@ const newRecipe = (data) => {
   json = JSON.parse(json);
   recipeDiv.innerHTML = '';
 
-  displayList(json);
+  displayRecipes(json);
 };
 
-window.onload = getData;
+window.onload = getRecipes;
