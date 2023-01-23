@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body onload="getData()">
+  <div id="container">
+    <h1 class="heading">⭐Recipes</H1>
+    <h3 class="heading">Add new recipe</h3>
+
+    <label class='formLabel' for="recipeTitleInput">Recipe title: </label>
+    <input type="text" id="recipeTitleInput" class="formElements">
+    <br>
+
+    <label class='formLabel' for="mealTypeInput">Meal type:</label>
+    <select id="mealTypeInput" class="formElements">
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Supper">Supper</option>
+    </select>
+    <br>
+
+    <label class='formLabel' for="numberOfPeopleServesInput">Number of people it serves:</label>
+    <input id="numberOfPeopleServesInput" class="formElements" type="number">
+    <br>
+
+    <label class='formLabel' for="difficultyLevelInput">Difficulty level:</label>
+    <select id="difficultyLevelInput" class="formElements">
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+    <br>
+
+    <label class='formLabel' for="ingredientsInput">Ingredients:</label>
+    <input id="ingredientsInput" class="formElements" type="text" placeholder="Milk: 250ml ...">
+    <br>
+
+    <label class='formLabel' for="preparationStepsInput">Preparation steps:</label>
+    <input type="text" id="preparationStepsInput" class="formElements" placeholder="Make the base, ...">
+    <br>
+
+    <button id="newRecipe" class="formElements">New recipe</button>
+
+    <br>
+    <h3 class="heading">Popular Dishes</h3>
+    <div id="recipe"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

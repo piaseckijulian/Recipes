@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1e1c1c;
+  color: white;
+}
+#container {
+  text-align: center;
+}
+.heading {
+  font-size: 50px;
+}
+.formElements {
+  background-color: #212121;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+.formLabel {
+  font-size: 25px;
+}
+#newRecipe {
+  cursor: pointer;
+  margin-top: 25px;
+}
+#recipe {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+#card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: 450px;
+  background-color: #212121;
+  padding: 5px;
+  border-style: solid;
+  border-color: white;
+  font-size: 20px;
+}

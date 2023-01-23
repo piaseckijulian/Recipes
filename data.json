@@ -1,0 +1,70 @@
+{
+  "dishes": {
+    "0": {
+      "recipeTitle": "Trick Out Your Burger",
+      "mealType": "Breakfast",
+      "numberOfPeopleServes": 2,
+      "difficultyLevel": "Beginner",
+      "ingredients": [
+        { "name": "canola oil, for frying", "amount": "1" },
+        { "name": "flour", "amount": "1/2 c." },
+        { "name": "eggs beaten", "amount": "2" },
+        { "name": "panko (Japanese bread crumbs)", "amount": "1 1/2 c." },
+        { "name": "sour or dill pickles", "amount": "8 half" },
+        { "name": "ranch dressing, for serving", "amount": "1" }
+      ],
+      "preparationSteps": [
+        "Add a kick",
+        "Special sauce",
+        "Frizzled onions",
+        "Glazed bacon",
+        "The tastiest melt"
+      ]
+    },
+    "1": {
+      "recipeTitle": "Pizza",
+      "mealType": "Lunch",
+      "numberOfPeopleServes": 4,
+      "difficultyLevel": "Intermediate",
+      "ingredients": [
+        { "name": "flour", "amount": "300g" },
+        { "name": "yeast", "amount": "1 tsp" },
+        { "name": "salt", "amount": "1 tsp" },
+        { "name": "olive oil", "amount": "1 tbsp" },
+        { "name": "passata", "amount": "100ml" },
+        { "name": "fresh basil", "amount": "1 tsp" },
+        { "name": "garlic clove", "amount": "1" },
+        { "name": "ball mozzarella", "amount": "125g" },
+        { "name": "cherry tomatoes", "amount": "handful" }
+      ],
+      "preparationSteps": [
+        "Make the base",
+        "Make the sauce",
+        "Roll out the dough",
+        "Top and bake"
+      ]
+    },
+    "2": {
+      "recipeTitle": "Skillet Pepper Pasta",
+      "mealType": "Supper",
+      "numberOfPeopleServes": 8,
+      "difficultyLevel": "Advanced",
+      "ingredients": [
+        { "name": "oil, divided", "amount": "4 tbsp" },
+        { "name": "large peppers", "amount": "2" },
+        { "name": "red onion (sliced)", "amount": "1" },
+        { "name": "red pepper flakes", "amount": "1/2 tsp" },
+        { "name": "Kosher salt", "amount": "1" },
+        { "name": "large cloves garlic (finely chopped)", "amount": "2" },
+        { "name": "fennel seeds (crushed)", "amount": "1/2 tsp" },
+        { "name": "tomato paste", "amount": "2 tbsp" },
+        { "name": "12 oz. linguine", "amount": "1 tsp" }
+      ],
+      "preparationSteps": [
+        "Heat 1 tablespoon oil in large skillet",
+        "Add linguine, 4 1/2 cups water, lemon zest",
+        "Toss with lemon juice and Romano until cheese is melted"
+      ]
+    }
+  }
+}
