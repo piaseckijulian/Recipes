@@ -1,5 +1,15 @@
 const recipeDiv = document.getElementById('recipe');
 const newRecipeBtn = document.getElementById('newRecipe');
+const recipeTitleInput = document.getElementById('recipeTitle');
+const mealTypeInput = document.getElementById('mealType');
+const numberOfPeopleServesInput = document.getElementById(
+  'numberOfPeopleServesInput'
+);
+const difficultyLevelInput = document.getElementById('difficultyLevel');
+const ingredientsInput = document.getElementById('ingredients');
+const preparationStepsInput = document.getElementById('preparationSteps');
+
+let cardNumber = 2;
 
 const getData = async () => {
   const response = await fetch('data.json');
@@ -9,38 +19,31 @@ const getData = async () => {
 
 const displayList = (data) => {
   newRecipeBtn.onclick = () => newRecipe(data);
+
   for (const i in data.dishes) {
     const cardDiv = document.createElement('div');
     cardDiv.id = 'card';
-    recipeDiv.appendChild(cardDiv);
 
     const recipeTitle = document.createElement('p');
-    recipeTitle.id = 'recipeTitle';
     recipeTitle.innerText = `Recipe title: ${data.dishes[i].recipeTitle}`;
 
     const mealType = document.createElement('p');
-    mealType.id = 'mealType';
     mealType.innerText = `Meal type: ${data.dishes[i].mealType}`;
 
     const numberOfPeopleServes = document.createElement('p');
-    numberOfPeopleServes.id = 'numberOfPeopleServes';
     numberOfPeopleServes.innerText = `Number of people it serves: ${data.dishes[i].numberOfPeopleServes}`;
 
     const difficultyLevel = document.createElement('p');
-    difficultyLevel.id = 'difficultyLevel';
     difficultyLevel.innerText = `Difficulty level: ${data.dishes[i].difficultyLevel}`;
 
     const ingredientsHeading = document.createElement('p');
-    ingredientsHeading.id = 'ingredientsHeading';
     ingredientsHeading.innerText = 'Ingredients:';
 
     const ingredientsList = document.createElement('ul');
-    ingredientsList.id = 'ingredientsList';
 
     const ingredientsItems = data.dishes[i].ingredients;
     ingredientsItems.map((item) => {
       const ingredients = document.createElement('li');
-      ingredients.id = 'ingredients';
       ingredients.innerText = `${Object.values(item)[0]}: ${
         Object.values(item)[1]
       }`;
@@ -49,17 +52,16 @@ const displayList = (data) => {
 
     const preparationHeading = document.createElement('p');
     preparationHeading.innerText = 'Preparation steps:';
-    preparationHeading.id = 'preparationHeading';
 
     const preparationSteps = document.createElement('ol');
-    preparationSteps.id = 'preparationSteps';
+
     for (const step of data.dishes[i].preparationSteps) {
       stepItem = document.createElement('li');
-      stepItem.id = 'stepItem';
       stepItem.innerText = step;
       preparationSteps.appendChild(stepItem);
     }
 
+    recipeDiv.appendChild(cardDiv);
     cardDiv.appendChild(recipeTitle);
     cardDiv.appendChild(mealType);
     cardDiv.appendChild(numberOfPeopleServes);
@@ -71,37 +73,26 @@ const displayList = (data) => {
   }
 };
 
-let cardNumber = 2;
-
 const newRecipe = (data) => {
   cardNumber += 1;
-  const recipeTitleInput = document.getElementById('recipeTitleInput');
-  const mealTypeInput = document.getElementById('mealTypeInput');
-  const numberOfPeopleServesInput = document.getElementById(
-    'numberOfPeopleServesInput'
-  );
-  const difficultyLevelInput = document.getElementById('difficultyLevelInput');
-  const ingredientsInput = document.getElementById('ingredientsInput');
-  const preparationStepsInput = document.getElementById(
-    'preparationStepsInput'
-  );
 
-  const preparationStepsValue = preparationStepsInput.value;
-  const preparationSteps = preparationStepsValue.split(',');
+  const preparationSteps = preparationStepsInput.value.split(',');
   if (preparationStepsValue.trim() === '') {
     return;
   }
+
   const preparationStepsArray = [];
   preparationSteps.map((step) => {
     preparationStepsArray.push(`"${step}"`);
   });
 
-  const ingredientsValue = ingredientsInput.value;
-  let ingredients = ingredientsValue.split(': ');
+  let ingredients = ingredientsInput.value.split(': ');
   if (ingredientsValue.trim() === '') {
     return;
   }
-  let ingredientsObject = [];
+
+  let ingredientsArrayObject = [];
+
   ingredients = ingredients.toString();
   ingredients = ingredients.split(',');
   for (let i = 0; i < ingredients.length; i++) {
@@ -110,7 +101,7 @@ const newRecipe = (data) => {
         ingredients[i] = ingredients[i].slice(1);
       }
 
-      ingredientsObject.push({
+      ingredientsArrayObject.push({
         name: ingredients[i],
         amount: ingredients[i + 1],
       });
@@ -127,10 +118,13 @@ const newRecipe = (data) => {
     "mealType": "${mealTypeInput.value}",
     "numberOfPeopleServes": "${numberOfPeopleServesInput.value}",
     "difficultyLevel": "${difficultyLevelInput.value}",
-    "ingredients": ${JSON.stringify(ingredientsObject)},
+    "ingredients": ${JSON.stringify(ingredientsArrayObject)},
     "preparationSteps": [${preparationStepsArray}]
   }}}`;
   json = JSON.parse(json);
   recipeDiv.innerHTML = '';
+
   displayList(json);
 };
+
+window.onload = getData;
