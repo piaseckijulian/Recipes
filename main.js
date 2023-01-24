@@ -24,28 +24,28 @@ const getRecipes = async () => {
 const displayRecipes = (data) => {
   newRecipeBtn.onclick = () => createNewRecipe(data);
 
-  for (const i in data.dishes) {
+  for (const recipeIndex in data.dishes) {
     const cardDiv = document.createElement('div');
     cardDiv.id = 'card';
 
-    const recipeTitle = document.createElement('p');
-    recipeTitle.innerText = `Recipe title: ${data.dishes[i].recipeTitle}`;
+    const recipeTitle = document.createElement('h4');
+    recipeTitle.innerHTML = data.dishes[recipeIndex].recipeTitle;
 
     const mealType = document.createElement('p');
-    mealType.innerText = `Meal type: ${data.dishes[i].mealType}`;
+    mealType.innerHTML = `Meal: <b>${data.dishes[recipeIndex].mealType}</b>`;
 
     const numberOfPeopleServes = document.createElement('p');
-    numberOfPeopleServes.innerText = `Number of people it serves: ${data.dishes[i].numberOfPeopleServes}`;
+    numberOfPeopleServes.innerHTML = `Number of people it serves: <b>${data.dishes[recipeIndex].numberOfPeopleServes}</b>`;
 
     const difficultyLevel = document.createElement('p');
-    difficultyLevel.innerText = `Difficulty level: ${data.dishes[i].difficultyLevel}`;
+    difficultyLevel.innerHTML = `Difficulty: <b>${data.dishes[recipeIndex].difficultyLevel}</b>`;
 
-    const ingredientsHeading = document.createElement('p');
-    ingredientsHeading.innerText = 'Ingredients:';
+    const ingredientsHeading = document.createElement('h4');
+    ingredientsHeading.innerHTML = 'Ingredients:';
 
     const ingredientsList = document.createElement('ul');
 
-    const ingredientsItems = data.dishes[i].ingredients;
+    const ingredientsItems = data.dishes[recipeIndex].ingredients;
     ingredientsItems.map((item) => {
       const ingredients = document.createElement('li');
       ingredients.innerText = `${Object.values(item)[0]}: ${
@@ -54,12 +54,12 @@ const displayRecipes = (data) => {
       ingredientsList.appendChild(ingredients);
     });
 
-    const preparationHeading = document.createElement('p');
+    const preparationHeading = document.createElement('h4');
     preparationHeading.innerText = 'Preparation steps:';
 
     const preparationSteps = document.createElement('ol');
 
-    for (const step of data.dishes[i].preparationSteps) {
+    for (const step of data.dishes[recipeIndex].preparationSteps) {
       stepItem = document.createElement('li');
       stepItem.innerText = step;
       preparationSteps.appendChild(stepItem);

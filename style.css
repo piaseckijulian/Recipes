@@ -12,13 +12,15 @@ body {
   font-size: 50px;
 }
 .formElements {
-  background-color: #212121;
+  background-color: rgb(27, 27, 27);
   color: white;
-  border: none;
+  border: 2px solid white;
   font-size: 25px;
+  margin-bottom: 10px;
 }
 .formLabel {
   font-size: 25px;
+  font-weight: bold;
 }
 #newRecipe {
   cursor: pointer;
@@ -33,7 +35,6 @@ body {
   margin-right: auto;
   margin-bottom: 25px;
   width: 450px;
-  background-color: #212121;
   padding: 5px;
   border-style: solid;
   border-color: white;

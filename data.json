@@ -1,69 +1,69 @@
 {
   "dishes": {
     "0": {
-      "recipeTitle": "Trick Out Your Burger",
+      "recipeTitle": "Scrambled Eggs",
       "mealType": "Breakfast",
-      "numberOfPeopleServes": 2,
+      "numberOfPeopleServes": 5,
       "difficultyLevel": "Beginner",
       "ingredients": [
-        { "name": "canola oil, for frying", "amount": "1" },
-        { "name": "flour", "amount": "1/2 c." },
-        { "name": "eggs beaten", "amount": "2" },
-        { "name": "panko (Japanese bread crumbs)", "amount": "1 1/2 c." },
-        { "name": "sour or dill pickles", "amount": "8 half" },
-        { "name": "ranch dressing, for serving", "amount": "1" }
+        { "name": "Eggs", "amount": "4" },
+        { "name": "Salt and Pepper", "amount": "for taste" },
+        { "name": "Butter or Oil", "amount": "1 tbsp " }
       ],
       "preparationSteps": [
-        "Add a kick",
-        "Special sauce",
-        "Frizzled onions",
-        "Glazed bacon",
-        "The tastiest melt"
+        "Crack the eggs into a bowl and beat them with a fork or whisk until the whites and yolks are fully combined.",
+        "Season the eggs with salt and pepper.",
+        "Heat a non-stick skillet over medium-high heat and add the butter or oil. Once the butter has melted or the oil is hot, add the eggs to the skillet.",
+        "Use a spatula to gently scramble the eggs, constantly stirring and scraping the bottom of the skillet until the eggs are cooked to your liking.",
+        "Serve the scrambled eggs hot, with toast or on a bed of greens."
       ]
     },
     "1": {
-      "recipeTitle": "Pizza",
+      "recipeTitle": "Grilled Cheese Sandwich.",
       "mealType": "Lunch",
-      "numberOfPeopleServes": 4,
+      "numberOfPeopleServes": 10,
       "difficultyLevel": "Intermediate",
       "ingredients": [
-        { "name": "flour", "amount": "300g" },
-        { "name": "yeast", "amount": "1 tsp" },
-        { "name": "salt", "amount": "1 tsp" },
-        { "name": "olive oil", "amount": "1 tbsp" },
-        { "name": "passata", "amount": "100ml" },
-        { "name": "fresh basil", "amount": "1 tsp" },
-        { "name": "garlic clove", "amount": "1" },
-        { "name": "ball mozzarella", "amount": "125g" },
-        { "name": "cherry tomatoes", "amount": "handful" }
+        { "name": "Slices of Bread", "amount": "4" },
+        {
+          "name": "Slices of Cheese (cheddar, mozzarella, or any cheese of your choice)",
+          "amount": "4"
+        },
+        { "name": "Butter or Margarine", "amount": "2 tbsp" }
       ],
       "preparationSteps": [
-        "Make the base",
-        "Make the sauce",
-        "Roll out the dough",
-        "Top and bake"
+        "Lay the bread slices on a flat surface, and place a slice of cheese on top of each of two slices of bread.",
+        "Place the remaining two slices of bread on top of the cheese, creating a sandwich.",
+        "Heat a skillet over medium heat, and add the butter or margarine.",
+        "Once the butter or margarine is melted, add the sandwich to the skillet.",
+        "Grill the sandwich until the bread is toasted and the cheese is melted, about 2-3 minutes per side.",
+        "Cut the sandwich in half and serve it warm."
       ]
     },
     "2": {
-      "recipeTitle": "Skillet Pepper Pasta",
+      "recipeTitle": "Spaghetti with Meat Sauce",
       "mealType": "Supper",
-      "numberOfPeopleServes": 8,
+      "numberOfPeopleServes": 15,
       "difficultyLevel": "Advanced",
       "ingredients": [
-        { "name": "oil, divided", "amount": "4 tbsp" },
-        { "name": "large peppers", "amount": "2" },
-        { "name": "red onion (sliced)", "amount": "1" },
-        { "name": "red pepper flakes", "amount": "1/2 tsp" },
-        { "name": "Kosher salt", "amount": "1" },
-        { "name": "large cloves garlic (finely chopped)", "amount": "2" },
-        { "name": "fennel seeds (crushed)", "amount": "1/2 tsp" },
-        { "name": "tomato paste", "amount": "2 tbsp" },
-        { "name": "12 oz. linguine", "amount": "1 tsp" }
+        { "name": "Spaghetti", "amount": "1 lb" },
+        { "name": "Ground Beef or Ground Turkey", "amount": "1" },
+        { "name": "Onion, Diced", "amount": "2" },
+        { "name": "Cloves of Garlic, Minced", "amount": "1" },
+        { "name": "Can (28 oz) of Crushed Tomatoes", "amount": "1" },
+        { "name": "Tomato Paste", "amount": "2 tbsp" },
+        { "name": "Dried Basil", "amount": "1 tsp" },
+        { "name": "Dried Oregano", "amount": "1 tsp" },
+        { "name": "Salt and Pepper", "amount": "for taste" },
+        { "name": "Grated Parmesan Cheese (Optional)", "amount": "1/4 cup" }
       ],
       "preparationSteps": [
-        "Heat 1 tablespoon oil in large skillet",
-        "Add linguine, 4 1/2 cups water, lemon zest",
-        "Toss with lemon juice and Romano until cheese is melted"
+        "Cook the spaghetti according to package instructions until al dente. Drain and set aside.",
+        "In a large pot or Dutch oven, brown the ground beef or turkey over medium heat. Drain the excess fat.",
+        "Add the onion and garlic to the pot and sauté until softened, about 5 minutes.",
+        "Stir in the crushed tomatoes, tomato paste, basil, oregano, salt, and pepper. Bring the mixture to a simmer and let it cook for about 15 minutes, or until the sauce thickens.",
+        "Add the cooked spaghetti to the pot and toss to coat the pasta with the sauce.",
+        "Serve the spaghetti with a sprinkle of grated Parmesan cheese on top, if desired."
       ]
     }
   }
