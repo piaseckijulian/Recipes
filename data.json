@@ -2,6 +2,7 @@
   "dishes": {
     "0": {
       "recipeTitle": "Scrambled Eggs",
+      "image": "https://img.freepik.com/free-photo/scrambled-eggs-with-tomatoes-pan_23-2148224122.jpg?w=1060&t=st=1674763075~exp=1674763675~hmac=b8d9e5096276fcc8b8b9cffa5146f5aaa22d3dadeb2d7bab4712a556cf4403a0",
       "mealType": "Breakfast",
       "numberOfPeopleServes": 5,
       "difficultyLevel": "Beginner",
@@ -19,7 +20,8 @@
       ]
     },
     "1": {
-      "recipeTitle": "Grilled Cheese Sandwich.",
+      "recipeTitle": "Grilled Cheese Sandwich",
+      "image": "https://img.freepik.com/free-photo/side-view-sandwich-with-baked-potato-sauce_176474-2510.jpg?w=1060&t=st=1674763030~exp=1674763630~hmac=c4f8a69f296b4a67dcf4178730b3a557b63c5b42a5b3cc5b1bc2777218df0f32",
       "mealType": "Lunch",
       "numberOfPeopleServes": 10,
       "difficultyLevel": "Intermediate",
@@ -42,6 +44,7 @@
     },
     "2": {
       "recipeTitle": "Spaghetti with Meat Sauce",
+      "image": "https://cdn.pixabay.com/photo/2017/01/17/17/05/spaghetti-1987454_960_720.jpg",
       "mealType": "Supper",
       "numberOfPeopleServes": 15,
       "difficultyLevel": "Advanced",

@@ -1,6 +1,7 @@
 const recipeDiv = document.getElementById('recipe');
 const newRecipeBtn = document.getElementById('newRecipe');
 const recipeTitleInput = document.getElementById('recipeTitle');
+const imageInput = document.getElementById('image');
 const mealTypeInput = document.getElementById('mealType');
 const numberOfPeopleServesInput = document.getElementById(
   'numberOfPeopleServes'
@@ -27,6 +28,13 @@ const displayRecipes = (data) => {
   for (const recipeIndex in data.dishes) {
     const cardDiv = document.createElement('div');
     cardDiv.id = 'card';
+
+    const image = document.createElement('img');
+    image.className = 'foodImg';
+    image.src = data.dishes[recipeIndex].image;
+    image.alt = 'Food image';
+    image.width = 400;
+    image.height = 200;
 
     const recipeTitle = document.createElement('h4');
     recipeTitle.innerHTML = data.dishes[recipeIndex].recipeTitle;
@@ -67,6 +75,7 @@ const displayRecipes = (data) => {
 
     recipeDiv.appendChild(cardDiv);
     cardDiv.appendChild(recipeTitle);
+    cardDiv.appendChild(image);
     cardDiv.appendChild(mealType);
     cardDiv.appendChild(numberOfPeopleServes);
     cardDiv.appendChild(difficultyLevel);
@@ -112,6 +121,7 @@ const createNewRecipe = (data) => {
   json += `,
   "${cardNumber}": {
     "recipeTitle": "${recipeTitleInput.value}",
+    "image": "${imageInput.value}",
     "mealType": "${mealTypeInput.value}",
     "numberOfPeopleServes": "${numberOfPeopleServesInput.value}",
     "difficultyLevel": "${difficultyLevelInput.value}",
