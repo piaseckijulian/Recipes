@@ -17,47 +17,49 @@
     <h1 class="heading">⭐Recipes</H1>
     <h3 class="heading">Add new recipe</h3>
 
-    <label class='formLabel' for="recipeTitle">Recipe title: </label>
-    <input type="text" id="recipeTitle" class="formElements">
-    <br>
+    <form onsubmit="return false">
 
-    <label class='formLabel' for="image">Image (url): </label>
-    <input type="url" id="image" class="formElements">
-    <br>
+      <label class='formLabel' for="recipeTitle">Recipe title: </label>
+      <input type="text" id="recipeTitle" class="formElements">
+      <br>
 
-    <label class='formLabel' for="mealType">Meal type:</label>
-    <select id="mealType" class="formElements">
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Supper">Supper</option>
-    </select>
-    <br>
+      <label class='formLabel' for="image">Image: </label>
+      <input type="url" id="image" class="formElements" placeholder="url">
+      <br>
 
-    <label class='formLabel' for="numberOfPeopleServes">Number of people it serves:</label>
-    <input id="numberOfPeopleServes" class="formElements" type="number" min="1" max="100">
-    <br>
+      <label class='formLabel' for="mealType">Meal type:</label>
+      <select id="mealType" class="formElements">
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Supper">Supper</option>
+      </select>
+      <br>
 
-    <label class='formLabel' for="difficultyLevel">Difficulty level:</label>
-    <select id="difficultyLevel" class="formElements">
-      <option value="Beginner">Beginner</option>
-      <option value="Intermediate">Intermediate</option>
-      <option value="Advanced">Advanced</option>
-    </select>
-    <br>
+      <label class='formLabel' for="numberOfPeopleServes">Number of people it serves:</label>
+      <input id="numberOfPeopleServes" class="formElements" type="number" min="1" max="100">
+      <br>
 
-    <label class='formLabel' for="ingredients">Ingredients:</label>
-    <input id="ingredients" class="formElements" type="text" placeholder="Milk: 250ml ...">
-    <br>
+      <label class='formLabel' for="difficultyLevel">Difficulty level:</label>
+      <select id="difficultyLevel" class="formElements">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+      <br>
 
-    <label class='formLabel' for="preparationSteps">Preparation steps:</label>
-    <input type="text" id="preparationSteps" class="formElements" placeholder="Make the base, ...">
-    <br>
+      <label class='formLabel' for="ingredients">Ingredients:</label>
+      <input id="ingredients" class="formElements" type="text" placeholder="Milk: 250ml ..." required>
+      <br>
 
-    <button id="newRecipe" class="formElements">New recipe</button>
+      <label class='formLabel' for="preparationSteps">Preparation steps:</label>
+      <input type="text" id="preparationSteps" class="formElements" placeholder="Make the base, ..." required>
+      <br>
 
-    <br>
-    <h3 class="heading">Popular Dishes</h3>
-    <div id="recipe"></div>
+      <input type="submit" id="newRecipe" class="formElements" value="New recipe">
+      </action=>
+      <br>
+      <h3 class="heading">Popular Dishes</h3>
+      <div id="recipe"></div>
   </div>
   <script src="main.js"></script>
 </body>

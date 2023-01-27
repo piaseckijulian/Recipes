@@ -89,14 +89,12 @@ const displayRecipes = (data) => {
 const createNewRecipe = (data) => {
   cardNumber += 1;
 
-  if (preparationStepsInput.value.trim() === '') return false;
   const preparationSteps = preparationStepsInput.value.split(',');
   const preparationStepsArray = [];
   preparationSteps.map((step) => {
     preparationStepsArray.push(`"${step}"`);
   });
 
-  if (ingredientsInput.value.trim() === '') return false;
   let ingredients = ingredientsInput.value.split(': ');
   const ingredientsArrayObject = [];
   ingredients = ingredients.toString();
