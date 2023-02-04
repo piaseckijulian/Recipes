@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipes</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <div id="container">
+      <h1 class="heading">⭐Recipes</h1>
+      <h3 class="heading">Add new recipe</h3>
 
-<body>
-  <div id="container">
-    <h1 class="heading">⭐Recipes</H1>
-    <h3 class="heading">Add new recipe</h3>
+      <form>
+        <label class="formLabel" for="recipeTitle">Recipe title: </label>
+        <input type="text" id="recipeTitle" class="formElements" required />
+        <br />
 
-    <form onsubmit="return false">
+        <label class="formLabel" for="image">Image: </label>
+        <input type="url" id="image" class="formElements" placeholder="url" />
+        <br />
 
-      <label class='formLabel' for="recipeTitle">Recipe title: </label>
-      <input type="text" id="recipeTitle" class="formElements">
-      <br>
+        <label class="formLabel" for="mealType">Meal type:</label>
+        <select id="mealType" class="formElements">
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Supper">Supper</option>
+        </select>
+        <br />
 
-      <label class='formLabel' for="image">Image: </label>
-      <input type="url" id="image" class="formElements" placeholder="url">
-      <br>
+        <label class="formLabel" for="numberOfPeopleServes"
+          >Number of people it serves:</label
+        >
+        <input
+          id="numberOfPeopleServes"
+          class="formElements"
+          type="number"
+          min="1"
+          max="100"
+          required
+        />
+        <br />
 
-      <label class='formLabel' for="mealType">Meal type:</label>
-      <select id="mealType" class="formElements">
-        <option value="Breakfast">Breakfast</option>
-        <option value="Lunch">Lunch</option>
-        <option value="Supper">Supper</option>
-      </select>
-      <br>
+        <label class="formLabel" for="difficultyLevel">Difficulty level:</label>
+        <select id="difficultyLevel" class="formElements">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+        <br />
 
-      <label class='formLabel' for="numberOfPeopleServes">Number of people it serves:</label>
-      <input id="numberOfPeopleServes" class="formElements" type="number" min="1" max="100">
-      <br>
+        <label class="formLabel" for="ingredients">Ingredients:</label>
+        <input
+          id="ingredients"
+          class="formElements"
+          type="text"
+          placeholder="Milk: 250ml ..."
+          pattern="[a-zA-Z0-9]+: [a-zA-Z0-9]+([a-zA-Z0-9 ]+)?(, [a-zA-Z0-9]+: [a-zA-Z0-9]+([a-zA-Z0-9 ]+)?)*"
+          required
+        />
+        <br />
 
-      <label class='formLabel' for="difficultyLevel">Difficulty level:</label>
-      <select id="difficultyLevel" class="formElements">
-        <option value="Beginner">Beginner</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Advanced">Advanced</option>
-      </select>
-      <br>
+        <label class="formLabel" for="preparationSteps"
+          >Preparation steps:</label
+        >
+        <input
+          type="text"
+          id="preparationSteps"
+          class="formElements"
+          placeholder="Make the base, ..."
+          required
+        />
+        <br />
 
-      <label class='formLabel' for="ingredients">Ingredients:</label>
-      <input id="ingredients" class="formElements" type="text" placeholder="Milk: 250ml ..." required>
-      <br>
+        <input
+          type="submit"
+          id="newRecipe"
+          class="formElements"
+          value="New recipe"
+        />
+      </form>
 
-      <label class='formLabel' for="preparationSteps">Preparation steps:</label>
-      <input type="text" id="preparationSteps" class="formElements" placeholder="Make the base, ..." required>
-      <br>
-
-      <input type="submit" id="newRecipe" class="formElements" value="New recipe">
-      </action=>
-      <br>
+      <br />
       <h3 class="heading">Popular Dishes</h3>
       <div id="recipe"></div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

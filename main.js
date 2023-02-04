@@ -1,5 +1,5 @@
 const recipeDiv = document.getElementById('recipe');
-const newRecipeBtn = document.getElementById('newRecipe');
+const form = document.querySelector('form');
 const recipeTitleInput = document.getElementById('recipeTitle');
 const imageInput = document.getElementById('image');
 const mealTypeInput = document.getElementById('mealType');
@@ -23,7 +23,8 @@ const getRecipes = async () => {
 };
 
 const displayRecipes = (data) => {
-  newRecipeBtn.onclick = () => createNewRecipe(data);
+  form.addEventListener('submit', (event) => event.preventDefault());
+  form.onsubmit = () => createNewRecipe(data);
 
   for (const recipeIndex in data.dishes) {
     const cardDiv = document.createElement('div');
